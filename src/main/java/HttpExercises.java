@@ -15,6 +15,7 @@ public class HttpExercises {
         User createdUser = HTTPUtils.post(user);
         System.out.println(createdUser);
 
+        user.setName("Kostas");
         User updatedUser = HTTPUtils.put(user, 5);
         System.out.println(updatedUser);
 

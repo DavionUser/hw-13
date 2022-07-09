@@ -32,7 +32,6 @@ public class HTTPUtils {
     }
 
     public static User put(User user, long id) throws IOException, InterruptedException {
-        user.setName("Kostas");
         String jsonUser = GSON.toJson(user);
 
         HttpRequest request = HttpRequest.newBuilder()
