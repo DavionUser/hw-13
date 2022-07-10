@@ -110,8 +110,7 @@ public class HTTPUtils {
 
         File fileJson = new File(String.format("user-%d-post-%d-comments.json", userId, postsCount));
         try (BufferedWriter bWriter = new BufferedWriter(new FileWriter(fileJson))) {
-            Gson gson = new Gson();
-            json = gson.toJson(comments);
+            json = GSON.toJson(comments);
             bWriter.write(json);
         } catch (IOException e) {
             System.err.println(e.getMessage());
